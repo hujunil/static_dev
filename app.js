@@ -6,7 +6,6 @@ let express = require("express");
 let nunjucks = require("nunjucks");
 let browserSync = require("browser-sync");
 
-
 const app = express();
 
 let tpl = nunjucks.configure(path.join(__dirname, "src"), {
@@ -17,7 +16,7 @@ let tpl = nunjucks.configure(path.join(__dirname, "src"), {
   watch:true
 });
 
-
+// 配置静态文件处理
 app.use("/static",express.static('src/static'));
 
 // 这里匹配所有的请求
@@ -31,7 +30,7 @@ app.get('/*', function (req, res, next) {
       }
     });
   } else {
-    res.send("xx:" + req.params[0].indexOf("/web"))
+    next();
   }
 });
 
