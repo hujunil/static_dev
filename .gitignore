@@ -1,0 +1,9 @@
+.cache
+.DS_Store
+.vscode
+.idea
+.node-version
+*.sublime-workspace
+*.log
+node_modules
+dist

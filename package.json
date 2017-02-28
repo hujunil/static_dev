@@ -1,0 +1,22 @@
+{
+  "name": "static_server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "dependencies": {
+    "express": "^4.14.1",
+    "fs-extra": "^2.0.0",
+    "nunjucks": "^3.0.0"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.18.8"
+  },
+  "scripts": {
+    "dev": "nodemon ./app.js",
+    "static": "node ./app.js",
+    "dist": "node ./dist.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
