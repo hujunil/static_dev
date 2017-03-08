@@ -21,7 +21,7 @@ app.use("/static",express.static('src/static'));
 
 // 这里匹配所有的请求
 app.get('/*', function (req, res, next) {
-  if(req.params[0].indexOf("web") == 0) {
+  if(req.params[0].indexOf("web") == 0 || req.params[0].indexOf("wap") == 0) {
     tpl.render(req.params[0], {}, (err, result) => {
       if(err) {
         next(err);
@@ -53,7 +53,7 @@ browserSync.init({
   open: true,
   notify: false,
   // 手机首页
-  startPath: "/web/index.html",
+  startPath: "/wap/index.html",
   // 延迟1s钟再刷新页面
   reloadDebounce: 1000,
   // server: {

@@ -1,0 +1,59 @@
+{% extends "../base/base.html" %}
+
+{% set select_menu = "5" %}
+
+{% block title %}用户权限管理-新增{% endblock %}
+
+{% block header %}
+  <style type="text/css">
+  </style>
+{% endblock %}
+
+{% block body %}
+    <ul class="breadcrumb">
+      <a href="yonghuquanxianguanli.html">用户权限管理</a> <span class="divider">/</span>
+      <li class="active">新增</li>
+    </ul>
+
+    <form class="form-horizontal" method="post" action="">
+
+      <div class="control-group">
+        <label class="control-label" for="f-usernmae">姓名</label>
+        <div class="controls">
+          <input type="text" id="f-username" name="username" placeholder="请输入用户名">
+        </div>
+      </div>
+
+      <div class="control-group">
+        <label class="control-label" for="f-account">账户名</label>
+        <div class="controls">
+          <input type="text" id="f-account" name="account" placeholder="请输入账户名">
+        </div>
+      </div>
+
+      <div class="control-group">
+        <label class="control-label" for="f-usernmae">密码</label>
+        <div class="controls">
+          <input type="password" id="f-username" name="password" placeholder="请输入密码">
+        </div>
+      </div>
+
+      <div class="control-group">
+        <label class="control-label" for="f-permission">权限</label>
+        <div class="controls" id="f-permission" name="permission">
+          <select>
+            <option>一级</option>
+            <option>二级</option>
+            <option>三级</option>
+          </select>
+        </div>
+      </div>
+      
+      <div class="control-group">
+          <div class="controls">
+            <button type="submit" class="btn btn-primary">保存</button>
+          </div>
+        </div>
+    </form>
+
+{% endblock %}

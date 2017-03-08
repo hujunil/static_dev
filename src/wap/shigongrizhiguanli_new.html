@@ -1,0 +1,216 @@
+{% extends "../base/mbase.html" %}
+
+{% block title %}XXX工程现场管理系统v1.0{% endblock %}
+
+{% block header %}
+  <style type="text/css">
+    select {
+      -webkit-appearance: none;
+      appearance: none;
+    }
+  </style>
+{% endblock %}
+
+{% block body %}
+  <div class="row" style="margin-top: 10px;">
+    <div class="col">
+      <h3>施工日志</h3>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+      2017年1月18日<br>
+      星期三
+    </div>
+    <div class="col">
+      天气：晴朗 <br>
+      风力：东南风2-3级 <br>
+      温度：-3℃—5℃
+    </div>
+  </div>
+
+  <form>
+    <div class="form-group">
+      <label for="f-zhuanghao">施工桩号</label>
+      <input type="text" class="form-control" id="f-zhuanghao" name="zhuanghao" placeholder="">
+    </div>
+
+    <div class="form-group">
+      <label for="f-project">施工项目</label>
+      <input type="text" class="form-control" id="f-project" name="project" placeholder="">
+    </div>
+
+    <label for="f-project">人、机、料使用</label>
+    <div class="row form-group">
+      <div class="col">
+        <select class="form-control">
+          <option>XX工</option>
+          <option>XX师傅</option>
+          <option>XX长</option>
+        </select>
+      </div>
+      <div class="col">
+        <input type="text" class="form-control" name="person">
+      </div>
+    </div>
+    <div class="row form-group">
+      <div class="col">
+        <select class="form-control">
+          <option>挖掘机</option>
+          <option>推土机</option>
+          <option>压路机</option>
+        </select>
+      </div>
+      <div class="col">
+        <input type="text" class="form-control" name="tools">
+      </div>
+    </div>
+    <div class="row form-group">
+      <div class="col">
+        <select class="form-control">
+          <option>水泥</option>
+          <option>钢筋</option>
+          <option>石灰</option>
+        </select>
+      </div>
+      <div class="col">
+        <input type="text" class="form-control" name="material"/>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <button type="submit" class="btn btn-primary">确定</button>
+    </div>
+
+    <div class="form-group">
+      <textarea class="form-control" rows="3"></textarea>
+    </div>
+
+    <label>临时人、机、料使用</label>
+    
+    <div class="row form-group">
+      <div class="col">
+        <select class="form-control">
+          <option>XX工</option>
+          <option>XX师傅</option>
+          <option>XX长</option>
+        </select>
+      </div>
+      <div class="col">
+        <input type="text" class="form-control" name="person">
+      </div>
+    </div>
+    <div class="row form-group">
+      <div class="col">
+        <select class="form-control">
+          <option>挖掘机</option>
+          <option>推土机</option>
+          <option>压路机</option>
+        </select>
+      </div>
+      <div class="col">
+        <input type="text" class="form-control" name="tools">
+      </div>
+    </div>
+    <div class="row form-group">
+      <div class="col">
+        <select class="form-control">
+          <option>水泥</option>
+          <option>钢筋</option>
+          <option>石灰</option>
+        </select>
+      </div>
+      <div class="col">
+        <input type="text" class="form-control" name="material"/>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <button type="submit" class="btn btn-primary">确定</button>
+    </div>
+
+    <div class="form-group">
+      <textarea class="form-control" rows="3"></textarea>
+    </div>
+
+    <div class="form-group row">
+      <div class="col">
+        <button class="btn btn-primary btn-block">保存</button>
+      </div>
+      <div class="col">
+        <button class="btn btn-info btn-block">预览</button>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label>工作内容描述</label>
+      <textarea class="form-control" rows="3"></textarea>
+    </div>
+
+    <div class="form-group row">
+      <div class="col">
+        <button class="btn btn-primary btn-block">保存</button>
+      </div>
+      <div class="col">
+        <button class="btn btn-info btn-block">预览</button>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label>检验内容</label>
+      <textarea class="form-control" rows="3"></textarea>
+    </div>
+
+    <div class="form-group row">
+      <div class="col">
+        <button class="btn btn-primary btn-block">保存</button>
+      </div>
+      <div class="col">
+        <button class="btn btn-info btn-block">预览</button>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label>检查内容</label>
+      <textarea class="form-control" rows="3"></textarea>
+    </div>
+
+    <div class="form-group row">
+      <div class="col">
+        <button class="btn btn-primary btn-block">保存</button>
+      </div>
+      <div class="col">
+        <button class="btn btn-info btn-block">预览</button>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label>其他内容</label>
+      <textarea class="form-control" rows="3"></textarea>
+    </div>
+
+    <div class="form-group row">
+      <div class="col">
+        <button class="btn btn-primary btn-block">保存</button>
+      </div>
+      <div class="col">
+        <button class="btn btn-info btn-block">预览</button>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label>备注</label>
+      <textarea class="form-control" rows="3"></textarea>
+    </div>
+
+    <div class="form-group row">
+      <div class="col">
+        <button class="btn btn-primary btn-block">保存</button>
+      </div>
+      <div class="col">
+        <button class="btn btn-info btn-block">预览</button>
+      </div>
+    </div>
+
+  </form>
+{% endblock %}

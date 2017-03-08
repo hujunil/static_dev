@@ -1,0 +1,122 @@
+{% extends "../base/base.html" %}
+
+{% set select_menu = "4" %}
+
+{% block title %}知识管理-规范管理{% endblock %}
+
+{% block header %}
+  <style type="text/css">
+  .contents {
+    width: 600px;
+  }
+  .contents ul {
+    list-style: none;
+  }
+  .contents ul li {
+    line-height: 2;
+  }
+  .contents ul li .pull-left {
+    cursor: pointer;
+  }
+  .hidden {
+    display: none;
+  }
+  </style>
+{% endblock %}
+
+{% block body %}
+    <ul class="breadcrumb">
+      <li><a href="zhishiguanli.html">知识管理</a> <span class="divider">/</span></li>
+      <li class="active">图纸</li>
+    </ul>
+    
+    <form class="form-inline">
+      <label>规范标题: </label>
+      <input type="text" placeholder="输入规范标题查询">
+      &nbsp;&nbsp;
+      <label>显示过滤: </label>
+      <select>
+        <option>全部</option>
+        <option>收藏夹</option>
+      </select>
+      <button type="submit" class="btn">查找</button>
+    </form>
+
+    <div class="operater-wrap">
+      <input type="file" id="f-import" />
+      <label class="btn btn-primary" for="f-import">导入</label>
+    </div>
+
+    <div class="contents">
+      <ul class="js-contents">
+        <li>
+          <div class="clearfix js-item">
+            <div class="pull-left"><i class="icon-folder-open"></i>&nbsp;第一册</div>
+            <div class="pull-right"><a href="">加入收藏</a></div>
+          </div>
+          <ul>
+            <li>
+              <div class="clearfix js-item">
+                <div class="pull-left"><i class="icon-leaf"></i>&nbsp;第一章</div>
+                <div class="pull-right"><a href="">加入收藏</a></div>
+              </div>
+            </li>
+            <li>
+              <div class="clearfix js-item">
+                <div class="pull-left"><i class="icon-leaf"></i>&nbsp;第二章</div>
+                <div class="pull-right"><a href="">加入收藏</a></div>
+              </div>
+            </li>
+            <li>
+              <div class="clearfix js-item">
+                <div class="pull-left"><i class="icon-leaf"></i>&nbsp;第三章</div>
+                <div class="pull-right"><a href="">加入收藏</a></div>
+              </div>
+            </li>
+            <li>
+              <div class="clearfix js-item">
+                <div class="pull-left"><i class="icon-folder-open"></i>&nbsp;第四章</div>
+                <div class="pull-right"><a href="">加入收藏</a></div>
+              </div>
+              <ul>
+                <li>
+                  <div class="clearfix js-item">
+                    <div class="pull-left"><i class="icon-leaf"></i>&nbsp;第一段</div>
+                    <div class="pull-right"><a href="">加入收藏</a></div>
+                  </div>
+                </li>
+                <li>
+                  <div class="clearfix js-item">
+                    <div class="pull-left"><i class="icon-leaf"></i>&nbsp;第二段</div>
+                    <div class="pull-right"><a href="">加入收藏</a></div>
+                  </div>
+                </li>
+                <li>
+                  <div class="clearfix js-item">
+                    <div class="pull-left"><i class="icon-leaf"></i>&nbsp;第三段</div>
+                    <div class="pull-right"><a href="">加入收藏</a></div>
+                  </div>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <div class="clearfix js-item">
+            <div class="pull-left"><i class="icon-folder-open"></i>&nbsp;第二章</div>
+            <div class="pull-right"><a href="">加入收藏</a></div>
+          </div>
+        </li>
+      </ul>
+    </div>
+
+    <script type="text/javascript">
+      $(document).ready(function() {
+        $(".js-contents").on("click", ".js-item", function(e) {
+          var $this = $(this);
+          $this.next().toggleClass('hidden');
+        });
+      });
+    </script>
+
+{% endblock %}

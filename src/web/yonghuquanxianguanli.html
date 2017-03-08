@@ -1,0 +1,89 @@
+{% extends "../base/base.html" %}
+
+{% set select_menu = "5" %}
+
+{% block title %}报检管理{% endblock %}
+
+{% block header %}
+  <style type="text/css">
+    .jianbao-img {
+      width: 90px;
+      height: 90px;
+    }
+
+  </style>
+{% endblock %}
+
+{% block body %}
+    <ul class="breadcrumb">
+      <li class="active">用户权限管理</li>
+    </ul>
+    
+    <form class="form-inline">
+
+      <label for="f-username">用户名: </label>
+      <input type="text" id="f-username" name="username" class="input-medium" />
+
+      &nbsp;&nbsp;
+      <label for="f-permission">权限级别: </label>
+      <select id="f-permission" name="permission" class="input-medium">
+        <option value="1">一级</option>
+        <option value="2">二级</option>
+        <option value="3">三级</option>
+      </select>
+
+      &nbsp;&nbsp;
+      <button class="btn btn-primary" type="submit">查询</button>
+    </form>
+
+    <div class="operater-wrap">
+      <a href="yonghuquanxianguanli_new.html" class="btn btn-primary">新增账户</a>
+    </div>
+
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th>姓名</th>
+          <th>账号名</th>
+          <th>权限级别</th>
+          <td style="width: 220px;">操作</td>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>张三</td>
+          <td>zhangsan</td>
+          <td>一级</td>
+          <td>
+            <a href="yonghuquanxianguanli_mima.html">修改密码</a>&nbsp;
+            <a href="yonghuquanxianguanli_quanxian.html">修改权限</a>&nbsp;
+            <a href="#">删除</a>&nbsp;
+          </td>
+        </tr>
+        <tr>
+          <td>李四</td>
+          <td>lisi</td>
+          <td>二级</td>
+          <td>
+            <a href="yonghuquanxianguanli_mima.html">修改密码</a>&nbsp;
+            <a href="yonghuquanxianguanli_quanxian.html">修改权限</a>&nbsp;
+            <a href="#">删除</a>&nbsp;
+          </td>
+        </tr>
+
+      </tbody>
+    </table>
+
+    <div class="pagination">
+      <ul>
+        <li><a href="#">«</a></li>
+        <li><a href="#">1</a></li>
+        <li><a href="#">2</a></li>
+        <li><a href="#">3</a></li>
+        <li><a href="#">4</a></li>
+        <li><a href="#">5</a></li>
+        <li><a href="#">»</a></li>
+      </ul>
+    </div>
+
+{% endblock %}

@@ -1,0 +1,141 @@
+{% extends "../base/base.html" %}
+
+{% set select_menu = "2" %}
+
+{% block title %}报检管理{% endblock %}
+
+{% block header %}
+  <style type="text/css">
+    .jianbao-img {
+      width: 90px;
+      height: 90px;
+    }
+
+    .operater-wrap {
+      margin-bottom: 15px;
+    }
+
+  </style>
+{% endblock %}
+
+{% block body %}
+    <ul class="breadcrumb">
+      <li class="active">报检管理</li>
+    </ul>
+
+    <form class="form-inline">
+
+      <label>日期: </label>
+      <div class="input-append date">
+        <input class="span2" id="appendedInputButton" type="text" style="width: 110px;" value="2017-02-28">
+        <button class="btn" type="button" title="点击选择"><i class="icon-calendar"></i></button>
+      </div>
+
+      &nbsp;&nbsp;
+      <label>报检标题: </label>
+      <input type="text" name="title" class="input-medium">
+
+      &nbsp;&nbsp;
+      <button class="btn btn-primary" type="submit">查询</button>
+      <span class="help-inline"></span>
+    </form>
+
+    <div class="operater-wrap">
+      <a href="/web/baojianguanli_new.html" class="btn btn-primary">新增</a>
+    </div>
+
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th>日期</th>
+          <th>申请报检人</th>
+          <th>报检标题</th>
+          <th>状态</th>
+          <td>操作</td>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>2017年03月02日</td>
+          <td>张三</td>
+          <td>张三报检一号桥一号桩</td>
+          <td>待处理</td>
+          <td><a href="#">处理</a>&nbsp;<a href="/web/baojianguanli_new.html">编辑</a></td>
+        </tr>
+        <tr>
+          <td>2017年03月01日</td>
+          <td>张三</td>
+          <td>张三报检一号桥一号桩</td>
+          <td><span class="text-success">已处理</span></td>
+          <td><a href="#">查看</a>&nbsp;<a href="/web/baojianguanli_new.html">编辑</a></td>
+        </tr>
+        <tr>
+          <td>2017年03月01日</td>
+          <td>张三</td>
+          <td>张三报检一号桥一号桩</td>
+          <td><span class="text-success">已处理</span></td>
+          <td><a href="#">查看</a>&nbsp;<a href="/web/baojianguanli_new.html">编辑</a></td>
+        </tr>
+        <tr>
+          <td>2017年03月01日</td>
+          <td>张三</td>
+          <td>张三报检一号桥一号桩</td>
+          <td><span class="text-success">已处理</span></td>
+          <td><a href="#">查看</a>&nbsp;<a href="/web/baojianguanli_new.html">编辑</a></td>
+        </tr>
+        <tr>
+          <td>2017年03月01日</td>
+          <td>张三</td>
+          <td>张三报检一号桥一号桩</td>
+          <td><span class="text-success">已处理</span></td>
+          <td><a href="#">查看</a>&nbsp;<a href="/web/baojianguanli_new.html">编辑</a></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="pagination">
+      <ul>
+        <li><a href="#">«</a></li>
+        <li><a href="#">1</a></li>
+        <li><a href="#">2</a></li>
+        <li><a href="#">3</a></li>
+        <li><a href="#">4</a></li>
+        <li><a href="#">5</a></li>
+        <li><a href="#">»</a></li>
+      </ul>
+    </div>
+
+    <hr>
+
+    <div class="jianbao-content">
+      <p><span class="text-">申请报检人: </span> 张三</p>
+      <p><span>申请标题: </span> 张三报检一号桥一号桩</p>
+      <p><span>报检分项工程: </span> xxxxxxxx</p>
+      <p><button class="btn btn-primary">导出照片</button></p>
+      <p>
+        <img class="img-polaroid jianbao-img" src="../static/img/test.png">
+        <img class="img-polaroid jianbao-img" src="../static/img/test.png">
+        <img class="img-polaroid jianbao-img" src="../static/img/test.png">
+        <img class="img-polaroid jianbao-img" src="../static/img/test.png">
+      </p>
+
+      <p>批复意见：</p>
+      <p>
+        <textarea style="width: 500px;" rows="4"></textarea> <br>
+        <button class="btn btn-success">同意</button>&nbsp;&nbsp;<button class="btn btn-danger">不同意</button>
+      </p>
+
+      <h4 style="margin-top: 15px; margin-bottom: 15px;">审核状态及意见</h4>
+      <dl class="dl-horizontal">
+        <dt>质检工程师</dt>
+        <dd>同意</dd>
+        <dt>工程部部长</dt>
+        <dd><span class="muted">未批复</span></dd>
+        <dt>监理</dt>
+        <dd><span class="muted">未推送</span></dd>
+        
+      </dl>
+
+    </div>
+
+{% endblock %}

@@ -1,0 +1,93 @@
+{% extends "../base/base.html" %}
+
+{% set select_menu = "3" %}
+
+{% block title %}报检管理{% endblock %}
+
+{% block header %}
+  <style type="text/css">
+    .letter_notice {
+      width: 740px;
+      margin: 0 auto;
+    }
+    .letter_notice h3 {
+      text-align: center;
+    }
+    .letter_notice_table {
+      table-layout: fixed;
+    }
+    .table .table-category {
+      width: 100px;
+      vertical-align: middle;
+    }
+  </style>
+{% endblock %}
+
+{% block body %}
+    <ul class="breadcrumb">
+      <a href="hunningtushiyongguanli2.html">混凝土使用管理</a> <span class="divider">/</span>
+      <li class="active">新增砼浇筑通知单</li>
+    </ul>
+
+    <div class="letter_notice">
+      <form class="form-horizontal" enctype="multipart/form-data" method="post">
+
+        <h3>砼浇筑通知单</h3>
+        <p><span>编号：</span><input type="text" name="num"/></p>
+        <table class="table table-bordered letter_notice_table">
+          <tr>
+            <td class="table-category">项目</td>
+            <td><input type="text" name="project_name"></td>
+            <td class="table-category">搅合站</td>
+            <td><input type="text" name="jiaohezhan"></td>
+          </tr>
+
+          <tr>
+            <td class="table-category">结构物名称</td>
+            <td colspan="3"><input type="text" name="structure_name" style="width: 575px;" /></td>
+          </tr>
+          <tr>
+            <td class="table-category">浇筑部位</td>
+            <td><input type="text" name="place"/></td>
+            <td class="table-category">设计强度</td>
+            <td><input type="text" name="strength"/></td>
+          </tr>
+          <tr>
+            <td class="table-category">浇筑日期</td>
+            <td><input type="text" name="strength"/></td>
+            <td class="table-category">设计方量</td>
+            <td>
+              <div class="input-append">
+                <input id="appendedInput" type="text" name="volume" style="width: 178px;" />
+                <span class="add-on">m³</span>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td class="table-category">说明</td>
+            <td colspan="3" >
+              <textarea rows="3" style="width: 575px;">这里是说明备注</textarea>
+            </td>
+          </tr>
+        </table>
+
+        <div style="margin-bottom: 15px;">
+          试验员: <input type="text" name="test_members" class="input-small"/> &nbsp;
+          现场负责人: <input type="text" name="charge_person" class="input-small"/>
+          日期: 
+          <div class="input-append">
+            <input class="span2" id="appendedInputButton" type="text" style="width: 110px;" value="2017年02月28日"/>
+            <button class="btn" type="button" title="点击选择"><i class="icon-calendar"></i></button>
+          </div>
+        </div>
+
+        <p>
+          <button class="btn btn-primary" type="submit">提交表格</button>
+          <button class="btn" type="button">导出表格</button>
+          <button class="btn" type="button">打印表格</button>
+        </p>
+        
+      </form>
+    </div>
+
+{% endblock %}

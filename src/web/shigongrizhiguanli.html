@@ -1,0 +1,161 @@
+{% extends "../base/base.html" %}
+
+{% set select_menu = "1" %}
+
+{% block title %}施工日志{% endblock %}
+
+{% block header %}
+  <style type="text/css">
+    .log-table {
+      table-layout: fixed;
+    }
+    .log-table .log-item-label {
+      width: 63px;
+      text-align: center;
+      vertical-align: middle;
+    }
+
+    .log-table .log-item-category {
+      width: 40px;
+      text-align: center;
+      vertical-align: middle;
+    }
+
+    .log-table .input-append,
+    .log-table .input-prepend {
+      margin-bottom: 0;
+    }
+
+    .log-table input,
+    .log-table textarea {
+      margin-bottom: 0;
+    }
+
+    .project-name {
+      padding-left: 15px;
+    }
+
+    .contract-phase {
+      padding-right: 15px;
+    }
+
+    .log-wrap {
+      width: 960px;
+    }
+
+  </style>
+{% endblock %}
+
+{% block body %}
+    <ul class="breadcrumb">
+      <li class="active">施工日志</li>
+    </ul>
+
+    <form class="form-inline">
+
+      <label>日期: </label>
+      <div class="input-append date">
+        <input class="span2" id="appendedInputButton" type="text" style="width: 110px;"/>
+        <button class="btn" type="button" title="点击选择"><i class="icon-calendar"></i></button>
+      </div>
+
+      &nbsp;&nbsp;
+      <label>技术员: </label>
+      <select style="width: 150px;">
+        <option>张三</option>
+        <option>李四</option>
+        <option>王五</option>
+      </select>
+
+      &nbsp;&nbsp;
+      <button class="btn btn-primary" type="submit">查询</button>
+      &nbsp;&nbsp;
+      <button class="btn btn-warning">修改</button>
+    </form>
+
+    <div class="log-wrap">
+      <h3 class="text-center">施工日志</h3>
+      <div class="clearfix">
+        <p class="pull-left project-name">工程名称: xxxx工程</p>
+        <p class="pull-right contract-phase">合同段: XXX段</p>
+      </div>
+      
+      <table class="table table-bordered log-table">
+        <tbody>
+          <tr>
+            <td rowspan="3" class="log-item-category">基<br>本<br>内<br>容</td>
+            <td class="log-item-label">日期</td>
+            <td style="width: 202px;">
+              <div class="input-append date">
+                <input class="span2" id="appendedInputButton" type="text" style="width: 148px;">
+                <button class="btn" type="button" title="点击选择"><i class="icon-calendar"></i></button>
+              </div>
+            </td>
+            <td class="log-item-label">气候</td>
+            <td style="width: 202px;"><input type="text" name="wether" value="晴转小雨" style="width: 189px;"></td>
+            <td class="log-item-label">气温</td>
+            <td style="width: 202px;">
+              <div class="input-append">
+                <input class="span2" id="appendedInput" type="text" style="width: 162px;">
+                <span class="add-on">℃</span>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td class="log-item-label">施工项目</td>
+            <td><input type="text" name="" style="width: 189px;" /></td>
+            <td class="log-item-label">施工桩号</td>
+            <td><input type="text" name="" style="width: 189px;"/></td>
+            <td class="log-item-label">施工部位</td>
+            <td><input type="text" name="" style="width: 189px;"/></td>
+          </tr>
+          <tr>
+            <td class="log-item-label">人、机、料使用</td>
+            <td colspan="5">
+              <textarea style="width: 789px;">这里是内容</textarea>
+            </td>
+          </tr>
+          <tr>
+            <td class="log-item-category">工<br>作<br>内<br>容<br>描<br>述</td>
+            <td colspan="6">
+              <textarea style="width: 870px;height: 110px;">这里是工作内容描述</textarea>
+            </td>
+          </tr>
+          <tr>
+            <td class="log-item-category">检<br>验<br>内<br>容</td>
+            <td colspan="6">
+              <textarea style="width: 870px; height: 70px;">检验内容</textarea>
+            </td>
+          </tr>
+          <tr>
+            <td class="log-item-category">检<br>查<br>内<br>容</td>
+            <td colspan="6">
+              <textarea style="width: 870px; height: 70px;">检查内容</textarea>
+            </td>
+          </tr>
+          <tr>
+            <td class="log-item-category">其<br>他<br>内<br>容<br></td>
+            <td colspan="6">
+              <textarea style="width: 870px; height: 70px;">其他内容</textarea>
+            </td>
+          </tr>
+          <tr>
+            <td class="log-item-category">备<br>注</td>
+            <td colspan="6">
+              <textarea style="width: 870px; height: 70px;">备注</textarea>
+            </td>
+          </tr>
+
+        </tbody>
+      </table>
+
+      <p>工程部分管技术员：张三</p>
+      <p>
+        <button class="btn">导出日志</button>
+        <button class="btn">导出临时用工</button>
+        <button class="btn">打印日志</button>
+        <button class="btn">批量打印</button>
+      </p>
+    </div>
+
+{% endblock %}

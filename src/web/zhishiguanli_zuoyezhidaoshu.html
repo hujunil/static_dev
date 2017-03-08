@@ -1,0 +1,71 @@
+{% extends "../base/base.html" %}
+
+{% set select_menu = "4" %}
+
+{% block title %}知识管理-作业指导书{% endblock %}
+
+{% block header %}
+  <style type="text/css">
+  </style>
+{% endblock %}
+
+{% block body %}
+    <ul class="breadcrumb">
+      <li><a href="zhishiguanli.html">知识管理</a> <span class="divider">/</span></li>
+      <li class="active">作业指导书</li>
+    </ul>
+    
+    <form class="form-inline">
+      <label>标题: </label>
+      <input type="text" placeholder="输入标题查询">
+      &nbsp;&nbsp;
+      <label>显示过滤: </label>
+      <select>
+        <option>全部</option>
+        <option>收藏夹</option>
+      </select>
+      <button type="submit" class="btn">查找</button>
+    </form>
+
+    <div class="operater-wrap">
+      <input type="file" id="f-import" />
+      <label class="btn btn-primary" for="f-import">导入</label>
+    </div>
+
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th>标题</th>
+          <th style="width: 200px;">操作</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>XXXX指导书1</td>
+          <td>
+            <a href="#">加入收藏</a>
+            <a href="zhishiguanli_zuoyezhidaoshu_xiangqing.html">详情</a>
+            <a href="zhishiguanli_zuoyezhidaoshu_bianji.html">编辑</a>
+          </td>
+        </tr>
+        <tr class="info">
+          <td>XXXX指导书2</td>
+          <td>
+            <a href="#">取消收藏</a>
+            <a href="zhishiguanli_zuoyezhidaoshu_xiangqing.html">详情</a>
+            <a href="zhishiguanli_zuoyezhidaoshu_bianji.html">编辑</a>
+          </td>
+        </tr>
+        <tr>
+          <td>XXXX指导书3</td>
+          <td>
+            <a href="#">加入收藏</a>
+            <a href="zhishiguanli_zuoyezhidaoshu_xiangqing.html">详情</a>
+            <a href="zhishiguanli_zuoyezhidaoshu_bianji.html">编辑</a>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <p>说明: 已经加入收藏的为浅蓝色显示</p>
+
+{% endblock %}

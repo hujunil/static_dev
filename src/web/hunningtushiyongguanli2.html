@@ -1,0 +1,111 @@
+{% extends "../base/base.html" %}
+
+{% set select_menu = "3" %}
+
+{% block title %}报检管理{% endblock %}
+
+{% block header %}
+  <style type="text/css">
+    .letter_notice {
+      width: 740px;
+    }
+    .letter_notice h3 {
+      text-align: center;
+    }
+    .letter_notice_table {
+      table-layout: fixed;
+    }
+    .table .table-category {
+      width: 100px;
+      vertical-align: middle;
+    }
+  </style>
+{% endblock %}
+
+{% block body %}
+    <ul class="breadcrumb">
+      <li class="active">混凝土使用管理</li>
+    </ul>
+    
+    <p>新砼浇筑通知：
+      <span class="label label-warning">王五报检五号桥一号桩</span>
+      <span class="label label-warning">张三报检一号桥二号桩</span>
+      <span class="label label-warning">李四报检二号桥一号桩</span>
+    </p>
+
+    <form class="form-inline">
+
+      <label>历史砼浇筑: </label>
+      <div class="input-append date">
+        <input class="span2" id="appendedInputButton" type="text" style="width: 110px;" value="2017-02-28">
+        <button class="btn" type="button" title="点击选择"><i class="icon-calendar"></i></button>
+      </div>
+
+      &nbsp;&nbsp;
+      
+      <select>
+        <option>王五报检五号桥一号桩</option>
+        <option>张三报检一号桥二号桩</option>
+        <option>李四报检二号桥一号桩</option>
+      </select>
+
+      &nbsp;&nbsp;
+      <button class="btn btn-primary" type="submit">查询</button>
+
+      <a href="hunningtushiyongguanli_new.html" class="btn btn-primary">新增</a>
+      <span class="help-inline"></span>
+    </form>
+
+    <div class="letter_notice">
+      <form class="form-horizontal" enctype="multipart/form-data" method="post">
+
+        <h3>砼浇筑通知单</h3>
+        <p><span>编号：</span>XXXXX</p>
+        <table class="table table-bordered letter_notice_table">
+          <tr>
+            <td class="table-category">项目</td>
+            <td>这是XXX项目</td>
+            <td class="table-category">搅合站</td>
+            <td>XXXX</td>
+          </tr>
+
+          <tr>
+            <td class="table-category">结构物名称</td>
+            <td colspan="3">XXX</td>
+          </tr>
+          <tr>
+            <td class="table-category">浇筑部位</td>
+            <td>这里是浇筑部位</td>
+            <td class="table-category">设计强度</td>
+            <td>很强的XXX</td>
+          </tr>
+          <tr>
+            <td class="table-category">浇筑日期</td>
+            <td>2017年03月05日</td>
+            <td class="table-category">设计方量</td>
+            <td>2017年03月06日</td>
+          </tr>
+          <tr>
+            <td class="table-category">说明</td>
+            <td colspan="3">这里是说明备注</td>
+          </tr>
+        </table>
+
+        <div style="margin-bottom: 15px;">
+          试验员: XXX &nbsp;
+          现场负责人: XXX
+          日期: xxxx-xx-xx
+          
+        </div>
+
+        <p>
+          <button class="btn btn-info"><i class="icon-white"></i>拌合站用量统计</button>
+          <button class="btn" type="button">导出表格</button>
+          <button class="btn" type="button">打印表格</button>
+        </p>
+        
+      </form>
+    </div>
+    
+
+{% endblock %}

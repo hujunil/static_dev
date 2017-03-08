@@ -1,0 +1,178 @@
+{% extends "../base/mbase.html" %}
+
+{% block title %}报检管理{% endblock %}
+
+{% block header %}
+  <style type="text/css">
+    select {
+      -webkit-appearance: none;
+      appearance: none;
+    }
+    .upload-img-preview {
+      width: 100px;
+      height: 100px;
+      margin-right: 10px;
+      margin-bottom: 10px;
+    }
+    .upload-img-choose {
+      border: 1px dashed #5cb85c;
+      height: 100px;
+      width: 100px;
+      border-radius: 6px;
+      text-align: center;
+      padding: 0;
+      margin-bottom: 0;
+      line-height: 96px;
+      font-size: 28px;
+      color: #5cb85c;
+    }
+  </style>
+{% endblock %}
+
+{% block body %}
+  <div class="row" style="margin-top: 10px;">
+    <div class="col">
+      <h3>报检管理</h3>
+    </div>
+  </div>
+
+  <form>
+    <legend>基本信息</legend>
+    <div class="form-group">
+      <label for="f-zhuanghao">报检标题</label>
+      <input type="text" class="form-control" id="f-zhuanghao" name="zhuanghao" placeholder="">
+    </div>
+
+    <label for="f-project">报检分项工程</label>
+    <div class="row form-group">
+      <div class="col">
+        <select class="form-control">
+          <option>XX公路1</option>
+          <option>XX公路2</option>
+          <option>XX公路3</option>
+        </select>
+      </div>
+      <div class="col">
+        <select class="form-control">
+          <option>1号段</option>
+          <option>2号段</option>
+          <option>3号段</option>
+        </select>
+      </div>
+      <div class="col">
+        <select class="form-control">
+          <option>路基</option>
+          <option>路面</option>
+          <option>桩</option>
+        </select>
+      </div>
+    </div>
+    
+    <div class="row form-group">
+      <div class="col">
+        <select class="form-control">
+          <option>水泥</option>
+          <option>钢筋</option>
+          <option>石灰</option>
+        </select>
+      </div>
+      <div class="col">
+        <select class="form-control">
+          <option>XXX</option>
+          <option>xxx</option>
+          <option>ddd</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <input type="text" name="" class="form-control"/>
+    </div>
+
+    <div class="form-group">
+      <button type="submit" class="btn btn-primary">确定</button>
+    </div>
+
+    <div class="form-group">
+      <label>图片</label>
+      <div class="clearfix" id="js-images">
+        <label class="upload-img-choose pull-left" for="f-chooice-file" id="js-select-label">+</label>
+        <input type="file" name="file1" id="f-chooice-file" style="font-size: 0;width: 0;height: 0; position: absolute; left: -9999px;" />
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label>说明</label>
+      <textarea class="form-control" rows="3"></textarea>
+    </div>
+
+    <legend>递交至</legend>
+    
+    <div class="form-group">
+      <label>质检工程师</label>
+      <select class="form-control">
+        <option>张三</option>
+        <option>李四</option>
+        <option>王五</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label>工程部部长</label>
+      <select class="form-control">
+        <option>张三</option>
+        <option>李四</option>
+        <option>王五</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label>监理</label>
+      <select class="form-control">
+        <option>张三</option>
+        <option>李四</option>
+        <option>王五</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <button class="btn btn-primary btn-block">提交</button>
+    </div>
+
+    <legend>审核状态</legend>
+
+    <blockquote class="blockquote">
+      <p class="mb-0">不同意，搞得质量不过关，重做。</p>
+      <footer class="blockquote-footer">质检工程师</footer>
+    </blockquote>
+
+    <blockquote class="blockquote">
+      <p class="mb-0">同意</p>
+      <footer class="blockquote-footer">工程部部长</footer>
+    </blockquote>
+
+    <blockquote class="blockquote">
+      <p class="mb-0">同意</p>
+      <footer class="blockquote-footer">监理</footer>
+    </blockquote>
+
+
+  </form>
+
+  <script type="text/javascript">
+    var $selectLabel = $("#js-select-label");
+    $("#f-chooice-file").on("change", function(e) {
+      // var $this = this;
+      var fileReader = new FileReader();
+      fileReader.readAsDataURL(this.files[0]);
+      fileReader.onload = function(evt) {
+        if (FileReader.DONE==fileReader.readyState) {
+          var img =  document.createElement('img');
+          img.src = this.result; //是Base64的data url数据
+          img.className = "rounded float-left upload-img-preview";
+          $selectLabel.before(img);
+        }
+      }
+    });
+  </script>
+{% endblock %}

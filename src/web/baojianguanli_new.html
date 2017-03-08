@@ -1,0 +1,128 @@
+{% extends "../base/base.html" %}
+
+{% set select_menu = "2" %}
+
+{% block title %}报检管理{% endblock %}
+
+{% block header %}
+  <style type="text/css">
+    .jianbao-img {
+      width: 90px;
+      height: 90px;
+    }
+    .baojian-img-itme {
+      float: left;
+      margin-right: 10px;
+    }
+    .baojian-img-wrap {
+      margin-top: 15px;
+    }
+    input[type="file"] {
+      width: 0.1px;
+      height: 0.1px;
+      opacity: 0;
+      overflow: hidden;
+      position: absolute;
+      z-index: -1;
+      font-size: 0;
+    }
+  </style>
+{% endblock %}
+
+{% block body %}
+    <ul class="breadcrumb">
+      <li><a href="baojianguanli.html">报检管理</a> <span class="divider">/</span></li>
+      <li class="active">新增</li>
+    </ul>
+
+    <form class="form-horizontal" enctype="multipart/form-data" method="post">
+      <legend>报检信息</legend>
+
+      <div class="control-group">
+        <label class="control-label" for="inputEmail">申请报检人</label>
+        <div class="controls">
+          <input type="text" name="shengbao-user" value="张三" readonly>
+        </div>
+      </div>
+      <div class="control-group">
+        <label class="control-label" for="f-title">报检标题</label>
+        <div class="controls">
+          <input type="text" id="f-title" placeholder="请填写报检标题">
+        </div>
+      </div>
+      <div class="control-group">
+        <label class="control-label" for="f-title">报检分项工程</label>
+        <div class="controls">
+          <select class="span2">
+            <option>分项1</option>
+          </select>
+          <select class="span2">
+            <option>分项2</option>
+          </select>
+          <select class="span2">
+            <option>分项3</option>
+          </select>
+          <select class="span2">
+            <option>分项4</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="control-group">
+        <label class="control-label" for="f-title">图片</label>
+        <div class="controls">
+          <input type="file" name="choose-file" class="btn btn-primary" id="jianbao-img-btn">
+          <label for="jianbao-img-btn" class="btn btn-info">选择图片</label>
+          <div class="baojian-img-wrap clearfix">
+            <div class="pull-left baojian-img-itme">
+              <p><img class="img-polaroid jianbao-img" src="../static/img/test.png"></p>
+              <button class="btn"><i class="icon-remove"></i>删除</button>
+            </div>
+            <div class="pull-left baojian-img-itme">
+              <p><img class="img-polaroid jianbao-img" src="../static/img/test.png"></p>
+              <button class="btn"><i class="icon-remove"></i>删除</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <legend>递交至</legend>
+
+      <div class="control-group">
+        <label class="control-label" for="f-title">质检工程师</label>
+        <div class="controls">
+          <select>
+            <option>张三</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="control-group">
+        <label class="control-label" for="f-title">工程部部长</label>
+        <div class="controls">
+          <select>
+            <option>李四</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="control-group">
+        <label class="control-label" for="f-title">监理</label>
+        <div class="controls">
+          <select>
+            <option>王五</option>
+          </select>
+        </div>
+      </div>
+      
+      <legend>操作</legend>
+      
+      <div class="control-group">
+        <div class="controls">
+          <button type="submit" class="btn btn-inverse" value="save" name="submit">暂存</button>
+          <button type="submit" class="btn btn-primary" value="submit" name="submit">提交</button>
+        </div>
+      </div>
+    </form>
+
+{% endblock %}

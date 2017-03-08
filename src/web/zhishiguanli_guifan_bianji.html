@@ -1,0 +1,42 @@
+{% extends "../base/base.html" %}
+
+{% set select_menu = "4" %}
+
+{% block title %}规范-编辑{% endblock %}
+
+{% block header %}
+  <style type="text/css">
+  </style>
+{% endblock %}
+
+{% block body %}
+    <ul class="breadcrumb">
+      <a href="zhishiguanli.html">用户权限管理</a> <span class="divider">/</span>
+      <a href="zhishiguanli_guifan.html">规范</a> <span class="divider">/</span>
+      <li class="active">编辑</li>
+    </ul>
+
+    <form class="form-horizontal" method="post" action="">
+
+      <div class="control-group">
+        <label class="control-label" for="f-title">标题</label>
+        <div class="controls">
+          <input type="text" id="f-title" name="title" placeholder="请输入标题" class="input-xxlarge">
+        </div>
+      </div>
+
+      <div class="control-group">
+        <label class="control-label" for="f-usernmae">内容</label>
+        <div class="controls">
+          <textarea class="input-xxlarge" rows="10">这里填写内容</textarea>
+        </div>
+      </div>
+      
+      <div class="control-group">
+          <div class="controls">
+            <button type="submit" class="btn btn-primary">保存</button>
+          </div>
+        </div>
+    </form>
+
+{% endblock %}
