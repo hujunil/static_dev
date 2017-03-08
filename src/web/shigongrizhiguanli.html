@@ -27,6 +27,7 @@
     }
 
     .log-table input,
+    .log-table select,
     .log-table textarea {
       margin-bottom: 0;
     }
@@ -83,7 +84,7 @@
       <table class="table table-bordered log-table">
         <tbody>
           <tr>
-            <td rowspan="3" class="log-item-category">基<br>本<br>内<br>容</td>
+            <td rowspan="2" class="log-item-category">基<br>本<br>内<br>容</td>
             <td class="log-item-label">日期</td>
             <td style="width: 202px;">
               <div class="input-append date">
@@ -109,12 +110,65 @@
             <td class="log-item-label">施工部位</td>
             <td><input type="text" name="" style="width: 189px;"/></td>
           </tr>
+
           <tr>
-            <td class="log-item-label">人、机、料使用</td>
-            <td colspan="5">
-              <textarea style="width: 789px;">这里是内容</textarea>
+            <td class="log-item-category">人机<br>料<br>使用</td>
+            <td colspan="6">
+
+              <select name="f-person" class="input-small">
+                <option value="xx工">xx工</option>
+                <option value="xxx师">xxx师</option>
+                <option value="xxx长">xxx长</option>
+              </select>
+              <input type="text" class="input-small"/>
+
+              <select name="f-machine" id="" class="input-small">
+                <option value="挖掘机">挖掘机</option>
+                <option value="压路机">压路机</option>
+              </select>
+              <input type="text" class="input-small"/>
+
+              <select name="f-material" id="" class="input-small">
+                <option value="水泥">水泥</option>
+                <option value="钢筋">钢筋</option>
+                <option value="石灰">石灰</option>
+              </select>
+              <input type="text" class="input-small"/>
+
+              <button class="btn btn-primary">添加</button>
+
             </td>
           </tr>
+
+          <tr>
+            <td class="log-item-category">临时<br>人机<br>料使<br>用</td>
+            <td colspan="6">
+
+              <select name="f-person" class="input-small">
+                <option value="xx工">xx工</option>
+                <option value="xxx师">xxx师</option>
+                <option value="xxx长">xxx长</option>
+              </select>
+              <input type="text" class="input-small"/>
+
+              <select name="f-machine" id="" class="input-small">
+                <option value="挖掘机">挖掘机</option>
+                <option value="压路机">压路机</option>
+              </select>
+              <input type="text" class="input-small"/>
+
+              <select name="f-material" id="" class="input-small">
+                <option value="水泥">水泥</option>
+                <option value="钢筋">钢筋</option>
+                <option value="石灰">石灰</option>
+              </select>
+              <input type="text" class="input-small"/>
+
+              <button class="btn btn-primary">添加</button>
+
+            </td>
+          </tr>
+
           <tr>
             <td class="log-item-category">工<br>作<br>内<br>容<br>描<br>述</td>
             <td colspan="6">
