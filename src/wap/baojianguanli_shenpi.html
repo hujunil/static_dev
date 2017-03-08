@@ -8,6 +8,12 @@
       -webkit-appearance: none;
       appearance: none;
     }
+    .project-img img {
+      width: 100px;
+      height: 100px;
+      margin-right: 10px;
+      margin-bottom: 10px;
+    }
   </style>
 {% endblock %}
 
@@ -17,7 +23,131 @@
       <h3>报检管理</h3>
     </div>
   </div>
-  <h4>待处理报检</h4>
+  <h4 style="margin: 15px 0;">待处理报检</h4>
+
+  <ul class="list-group">
+    <li class="list-group-item">张三报检一号桥一号桩</li>
+    <li class="list-group-item">张三报检一号桥二号桩</li>
+    <li class="list-group-item">王五报检五号桥一号桩</li>
+  </ul>
+
+  <h4 style="margin: 15px 0;">历史报检</h4>
+  <form action="#">
+    <label for="f-year">日期</label>
+    <div class="form-group row">
+      <div class="col-4">
+        <select name="year" id="f-year" class="form-control">
+          <option value="2017">2017</option>
+          <option value="2016">2016</option>
+          <option value="2015">2015</option>
+        </select>
+      </div>
+
+      <div class="col-4">
+        <select name="month" id="f-month" class="form-control">
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+          <option value="6">6</option>
+          <option value="7">7</option>
+          <option value="8">8</option>
+          <option value="9">9</option>
+          <option value="10">10</option>
+          <option value="11">11</option>
+          <option value="12">12</option>
+        </select>
+      </div>
+
+      <div class="col-4">
+        <select name="day" id="f-day" class="form-control">
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+          <option value="6">6</option>
+          <option value="7">7</option>
+          <option value="8">8</option>
+          <option value="9">9</option>
+          <option value="10">10</option>
+          <option value="11">11</option>
+          <option value="12">12</option>
+        </select>
+      </div>
+
+
+    </div>
+
+    <div class="form-group">
+      <select name="what" id="f-what" class="form-control">
+        <option value="1">张三一号公路5号段路基报检</option>
+        <option value="2">李四二号桥7号墩报检</option>
+        <option value="3">张三一号公路5号段路基报检</option>
+        <option value="4">王五二号公路1号段路面报检</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <button type="submit" class="btn btn-primary">查询</button>
+    </div>
+
+
+    <hr>
+
+  </form>
+
+  <p><strong>申请报检人</strong></p>
+  <p>XXXXX申请报检人</p>
+
+  <p><strong>报检标题</strong></p>
+  <p>XXXXX报检标题</p>
+
+  <p><strong>报检分项工程</strong></p>
+  <p>XXXX报检分项工程</p>
+
+  <p class="project-img">
+    <img class="float-left rounded" alt="图片" src="data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22200%22%20height%3D%22200%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20200%20200%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_15aadaa7f0d%20text%20%7B%20fill%3Argba(255%2C255%2C255%2C.75)%3Bfont-weight%3Anormal%3Bfont-family%3AHelvetica%2C%20monospace%3Bfont-size%3A10pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_15aadaa7f0d%22%3E%3Crect%20width%3D%22200%22%20height%3D%22200%22%20fill%3D%22%23777%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%2275.5%22%20y%3D%22104.5%22%3E200x200%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E"/>
+    <img class="float-left rounded" alt="图片" src="data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22200%22%20height%3D%22200%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20200%20200%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_15aadaa7f0d%20text%20%7B%20fill%3Argba(255%2C255%2C255%2C.75)%3Bfont-weight%3Anormal%3Bfont-family%3AHelvetica%2C%20monospace%3Bfont-size%3A10pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_15aadaa7f0d%22%3E%3Crect%20width%3D%22200%22%20height%3D%22200%22%20fill%3D%22%23777%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%2275.5%22%20y%3D%22104.5%22%3E200x200%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E"/>
+    <img class="float-left rounded" alt="图片" src="data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22200%22%20height%3D%22200%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20200%20200%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_15aadaa7f0d%20text%20%7B%20fill%3Argba(255%2C255%2C255%2C.75)%3Bfont-weight%3Anormal%3Bfont-family%3AHelvetica%2C%20monospace%3Bfont-size%3A10pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_15aadaa7f0d%22%3E%3Crect%20width%3D%22200%22%20height%3D%22200%22%20fill%3D%22%23777%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%2275.5%22%20y%3D%22104.5%22%3E200x200%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E"/>
+  </p>
+
+  <form action="#">
+    <div class="form-group">
+      <label for="f-opinion">批复意见</label>
+      <textarea name="opinion" id="f-opinion" rows="4" class="form-control"></textarea>
+    </div>
+    <div class="form-group row">
+      <div class="col-6">
+        <button type="button" class="btn btn-danger btn-block">不同意</button>
+      </div>
+      <div class="col-6">
+        <button type="button" class="btn btn-success btn-block">同意</button>
+      </div>
+    </div>
+  </form>
+
+
+
+  <h4 style="margin: 15px 0;">审核状态</h4>
+
+  <blockquote class="blockquote">
+    <p class="mb-0">不同意，搞得质量不过关，重做。</p>
+    <footer class="blockquote-footer">质检工程师</footer>
+  </blockquote>
+
+  <blockquote class="blockquote">
+    <p class="mb-0">同意</p>
+    <footer class="blockquote-footer">工程部部长</footer>
+  </blockquote>
+
+  <blockquote class="blockquote">
+    <p class="mb-0">同意</p>
+    <footer class="blockquote-footer">监理</footer>
+  </blockquote>
+
+
 
   
 {% endblock %}

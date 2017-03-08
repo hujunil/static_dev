@@ -35,7 +35,7 @@ files = [];
 
 fse.readdirSync( path.join(__dirname, "src/web") ).forEach(function(item) {
   files.push('web/'+item);
-});;
+});
 
 console.log(files);
 
