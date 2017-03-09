@@ -37,6 +37,10 @@ fse.readdirSync( path.join(__dirname, "src/web") ).forEach(function(item) {
   files.push('web/'+item);
 });
 
+fse.readdirSync( path.join(__dirname, "src/wap") ).forEach(function(item) {
+  files.push('wap/'+item);
+});
+
 console.log(files);
 
 //return;

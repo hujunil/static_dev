@@ -1,0 +1,46 @@
+{% extends "../base/mbase.html" %}
+
+{% block title %}报检管理{% endblock %}
+
+{% block header %}
+  <style type="text/css">
+    select {
+      -webkit-appearance: none;
+      appearance: none;
+    }
+    .upload-img-preview {
+      width: 100px;
+      height: 100px;
+      margin-right: 10px;
+      margin-bottom: 10px;
+    }
+    .upload-img-choose {
+      border: 1px dashed #5cb85c;
+      height: 100px;
+      width: 100px;
+      border-radius: 6px;
+      text-align: center;
+      padding: 0;
+      margin-bottom: 0;
+      line-height: 96px;
+      font-size: 28px;
+      color: #5cb85c;
+    }
+    .data-table thead,
+    .data-table tbody{
+      min-width: 100%;
+    }
+  </style>
+{% endblock %}
+
+{% block body %}
+    <div class="row" style="margin-top: 10px;">
+      <div class="col">
+        <h3>质量控制书</h3>
+      </div>
+    </div>
+
+    <p>参考 <a href="zhishiguanli_guifan.html">规范</a></p>
+
+  
+{% endblock %}

@@ -1,0 +1,57 @@
+{% extends "../base/mbase.html" %}
+
+{% block title %}报检管理{% endblock %}
+
+{% block header %}
+  <style type="text/css">
+    select {
+      -webkit-appearance: none;
+      appearance: none;
+    }
+    .upload-img-preview {
+      width: 100px;
+      height: 100px;
+      margin-right: 10px;
+      margin-bottom: 10px;
+    }
+    .upload-img-choose {
+      border: 1px dashed #5cb85c;
+      height: 100px;
+      width: 100px;
+      border-radius: 6px;
+      text-align: center;
+      padding: 0;
+      margin-bottom: 0;
+      line-height: 96px;
+      font-size: 28px;
+      color: #5cb85c;
+    }
+    .data-table thead,
+    .data-table tbody{
+      min-width: 100%;
+    }
+  </style>
+{% endblock %}
+
+{% block body %}
+    <div class="row">
+      <div class="col" style="margin: 20px 0;">
+        <h3>图纸</h3>
+      </div>
+    </div>
+    <p><button class="btn btn-primary">收藏夹</button></p>
+    <p>目录:</p>
+    <ul>
+      <li>
+        <div>第一册</div>
+        <ul>
+          <li>第一部分</li>
+          <li>第二部分</li>
+          <li>第三部分</li>
+        </ul>
+      </li>
+      <li>
+        <div>第二册</div>
+      </li>
+    </ul>
+{% endblock %}

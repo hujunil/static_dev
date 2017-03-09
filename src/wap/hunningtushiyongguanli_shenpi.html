@@ -26,96 +26,96 @@
 {% endblock %}
 
 {% block body %}
-  <div class="row" style="margin-top: 10px;">
-    <div class="col">
-      <h3>混凝土使用管理</h3>
+    <div class="row" style="margin-top: 10px;">
+      <div class="col">
+        <h3>混凝土使用管理</h3>
+      </div>
     </div>
-  </div>
-  <h4 style="margin: 15px 0;">新砼浇筑通知</h4>
+    <h4 style="margin: 15px 0;">新砼浇筑通知</h4>
 
-  <ul class="list-group">
-    <li class="list-group-item">张三报检一号桥一号桩</li>
-    <li class="list-group-item">张三报检一号桥二号桩</li>
-    <li class="list-group-item">王五报检五号桥一号桩</li>
-  </ul>
+    <ul class="list-group">
+      <li class="list-group-item">张三报检一号桥一号桩</li>
+      <li class="list-group-item">张三报检一号桥二号桩</li>
+      <li class="list-group-item">王五报检五号桥一号桩</li>
+    </ul>
 
-  <form action="">
-    <div class="form-group">
-      <label for="f-date" style="margin-top: 20px;">日期</label>
-      <input type="date" class="form-control" name="date" id="f-date"/>
-    </div>
+    <form action="">
+      <div class="form-group">
+        <label for="f-date" style="margin-top: 20px;">日期</label>
+        <input type="date" class="form-control" name="date" id="f-date"/>
+      </div>
 
-    <div class="form-group">
+      <div class="form-group">
 
-      <select name="f-title" id="title" class="form-control">
-        <option value="张三一号公路5号段路基报检">张三一号公路5号段路基报检</option>
-        <option value="李四二号桥7号墩报检">李四二号桥7号墩报检</option>
-      </select>
-    </div>
+        <select name="f-title" id="title" class="form-control">
+          <option value="张三一号公路5号段路基报检">张三一号公路5号段路基报检</option>
+          <option value="李四二号桥7号墩报检">李四二号桥7号墩报检</option>
+        </select>
+      </div>
 
-    <div class="form-group">
+      <div class="form-group">
+        <button class="btn btn-primary">查询</button>
+      </div>
+      
+    </form>
+
+    <p><strong>现场负责人</strong></p>
+    <p>XXX</p>
+
+    <p><strong>编号</strong></p>
+    <p>XXX</p>
+
+    <p><strong>项目</strong></p>
+    <p>XXX</p>
+
+    <p><strong>拌合站</strong></p>
+    <p>XXX</p>
+
+    <p><strong>结构物名称</strong></p>
+    <p>XXX</p>
+
+    <p><strong>浇筑部位</strong></p>
+    <p>XXX</p>
+
+    <p><strong>设计强度</strong></p>
+    <p>XXX</p>
+
+    <p><strong>设计方量（m³）</strong></p>
+    <p>XXX</p>
+
+    <p><strong>说明</strong></p>
+    <p>XXX</p>
+
+
+    <p>
+      <button class="btn btn-primary" type="button" id="js-show-statistics">混凝土使用统计</button>
+    </p>
+
+    <form action="#" id="js-statistics-form" class="statistics-form">
+      <div class="form-group">
+        <label for="f-start-date">开始时间</label>
+        <input type="date" class="form-control">
+      </div>
+      <div class="form-group">
+        <label for="f-end-date">结束时间</label>
+        <input type="date" class="form-control">
+      </div>
+
+      <div class="form-group">
       <button class="btn btn-primary">查询</button>
-    </div>
-    
-  </form>
+      </div>
 
-  <p><strong>现场负责人</strong></p>
-  <p>XXX</p>
-
-  <p><strong>编号</strong></p>
-  <p>XXX</p>
-
-  <p><strong>项目</strong></p>
-  <p>XXX</p>
-
-  <p><strong>拌合站</strong></p>
-  <p>XXX</p>
-
-  <p><strong>结构物名称</strong></p>
-  <p>XXX</p>
-
-  <p><strong>浇筑部位</strong></p>
-  <p>XXX</p>
-
-  <p><strong>设计强度</strong></p>
-  <p>XXX</p>
-
-  <p><strong>设计方量（m³）</strong></p>
-  <p>XXX</p>
-
-  <p><strong>说明</strong></p>
-  <p>XXX</p>
+      <p>XXX立方米</p>
 
 
-  <p>
-    <button class="btn btn-primary" type="button" id="js-show-statistics">混凝土使用统计</button>
-  </p>
-
-  <form action="#" id="js-statistics-form" class="statistics-form">
-    <div class="form-group">
-      <label for="f-start-date">开始时间</label>
-      <input type="date" class="form-control">
-    </div>
-    <div class="form-group">
-      <label for="f-end-date">结束时间</label>
-      <input type="date" class="form-control">
-    </div>
-
-    <div class="form-group">
-    <button class="btn btn-primary">查询</button>
-    </div>
-
-    <p>XXX立方米</p>
+    </form>
 
 
-  </form>
-
-
-  <script>
-    $("#js-show-statistics").on("click", function (e) {
-      $("#js-statistics-form").toggleClass("show");
-    });
-  </script>
+    <script>
+      $("#js-show-statistics").on("click", function (e) {
+        $("#js-statistics-form").toggleClass("show");
+      });
+    </script>
 
 
 

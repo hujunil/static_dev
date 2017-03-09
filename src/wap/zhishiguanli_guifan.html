@@ -1,0 +1,96 @@
+{% extends "../base/mbase.html" %}
+
+{% block title %}报检管理{% endblock %}
+
+{% block header %}
+  <style type="text/css">
+    select {
+      -webkit-appearance: none;
+      appearance: none;
+    }
+    .upload-img-preview {
+      width: 100px;
+      height: 100px;
+      margin-right: 10px;
+      margin-bottom: 10px;
+    }
+    .upload-img-choose {
+      border: 1px dashed #5cb85c;
+      height: 100px;
+      width: 100px;
+      border-radius: 6px;
+      text-align: center;
+      padding: 0;
+      margin-bottom: 0;
+      line-height: 96px;
+      font-size: 28px;
+      color: #5cb85c;
+    }
+    .data-table thead,
+    .data-table tbody{
+      min-width: 100%;
+    }
+  </style>
+{% endblock %}
+
+{% block body %}
+    <div class="row" style="margin-top: 10px;">
+      <div class="col">
+        <h3>规范</h3>
+      </div>
+    </div>
+
+    <form action="#">
+      <div class="form-group row">
+        <div class="col-8">
+          <input type="text" name="title" class="form-control">
+        </div>
+        <div class="col-4">
+          <select class="form-control">
+            <option value="全部">全部</option>
+            <option value="收藏夹">收藏夹</option>
+          </select>
+        </div>
+      </div>
+      <div class="form-group">
+        <button class="btn btn-primary">查询</button>
+      </div>
+    </form>
+
+    <table class="table">
+      <thead>
+        <tr>
+          <th>标题</th>
+          <th style="width: 100px;">操作</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>这里是标题1</td>
+          <td><a href="">加入收藏</a></td>
+        </tr>
+        <tr>
+          <td>这里是标题的哦</td>
+          <td><a href="">取消收藏</a></td>
+        </tr>
+        <tr>
+          <td>这里是标题的哦</td>
+          <td><a href="">取消收藏</a></td>
+        </tr>
+        <tr>
+          <td>这里是标题的哦</td>
+          <td><a href="">取消收藏</a></td>
+        </tr>
+        <tr>
+          <td>这里是标题的哦</td>
+          <td><a href="">取消收藏</a></td>
+        </tr>
+        <tr>
+          <td>这里是标题的哦</td>
+          <td><a href="">取消收藏</a></td>
+        </tr>
+      </tbody>
+    </table>
+
+  
+{% endblock %}
