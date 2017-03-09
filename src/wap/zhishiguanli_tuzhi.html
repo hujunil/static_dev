@@ -2,33 +2,22 @@
 
 {% block title %}报检管理{% endblock %}
 
+{% set select_menu = "5" %}
+
 {% block header %}
+  <link rel="stylesheet" type="text/css" href="http://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css">
   <style type="text/css">
-    select {
-      -webkit-appearance: none;
-      appearance: none;
+    .content-list ul {
+      list-style: none;
     }
-    .upload-img-preview {
-      width: 100px;
-      height: 100px;
-      margin-right: 10px;
-      margin-bottom: 10px;
+    .content-list ul li {
+      line-height: 2;
     }
-    .upload-img-choose {
-      border: 1px dashed #5cb85c;
-      height: 100px;
-      width: 100px;
-      border-radius: 6px;
-      text-align: center;
-      padding: 0;
-      margin-bottom: 0;
-      line-height: 96px;
-      font-size: 28px;
-      color: #5cb85c;
+    .list-root {
+      padding-left: 0;
     }
-    .data-table thead,
-    .data-table tbody{
-      min-width: 100%;
+    .hidden {
+      display: none;
     }
   </style>
 {% endblock %}
@@ -40,18 +29,36 @@
       </div>
     </div>
     <p><button class="btn btn-primary">收藏夹</button></p>
-    <p>目录:</p>
-    <ul>
-      <li>
-        <div>第一册</div>
-        <ul>
-          <li>第一部分</li>
-          <li>第二部分</li>
-          <li>第三部分</li>
-        </ul>
-      </li>
-      <li>
-        <div>第二册</div>
-      </li>
-    </ul>
+    <div>目录</div>
+    <div class="content-list">
+      <ul class="list-root js-contents">
+        <li>
+          <div class="js-item"><i class="fa fa-folder-open" aria-hidden="true"></i>&nbsp;第一册</div>
+          <ul>
+            <li><div class="js-item"><i class="fa fa-book" aria-hidden="true"></i>&nbsp;第一部分</div></li>
+            <li><div class="js-item"><i class="fa fa-book" aria-hidden="true"></i>&nbsp;第二部分</div></li>
+            <li><div class="js-item"><i class="fa fa-book" aria-hidden="true"></i>&nbsp;第三部分</div></li>
+          </ul>
+        </li>
+        <li>
+          <div class="js-item"><i class="fa fa-folder" aria-hidden="true"></i>&nbsp;第二册</div>
+        </li>
+      </ul>
+    </div>
+    <script type="text/javascript">
+      $(document).ready(function() {
+        $(".js-contents").on("click", ".js-item", function(e) {
+          var $this = $(this);
+          $this.next().toggleClass('hidden');
+          console.log($this.next().length);
+          if($this.next().length) {
+            if ($this.next().hasClass("hidden")) {
+              $this.find(".fa").removeClass("fa-folder-open").addClass("fa-folder");
+            } else {
+              $this.find(".fa").removeClass("fa-folder").addClass("fa-folder-open");
+            }
+          }
+        });
+      });
+    </script>
 {% endblock %}
